@@ -5,8 +5,7 @@
     "dev-client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
     "start": "node app.js",
-    "client": "npm start --prefix client",
-    "build": "npm run build --prefix client"
+    "build": "npm install && cd client && npm install && npm run build"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
