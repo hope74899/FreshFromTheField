@@ -16,7 +16,7 @@ app.use('/public', express.static(path.join(__dirname, '..', 'public')));
 
 // CORS setup for Production and Development
 const corsOptions = {
-    origin: process.env.FRONTENDPATH,
+    origin: 'https://freshfromthefield.vercel.app',
     methods: "GET, POST, PATCH, PUT, DELETE, HEAD",
     credentials: true
 }
