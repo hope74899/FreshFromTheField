@@ -475,7 +475,7 @@ const googleCallback = async (req, res) => {
         });
 
         // Redirect to frontend route after setting the cookie
-        const frontendRedirectURL = `${process.env.frontendPath}/google-login`;
+        const frontendRedirectURL = `${process.env.FRONTENDPATH}/google-login`;
         return res.redirect(frontendRedirectURL); // Adjust the URL based on your frontend domain
     } catch (error) {
         console.error("Error in Google OAuth callback:", error);

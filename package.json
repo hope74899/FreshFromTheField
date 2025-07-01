@@ -1,11 +1,9 @@
 {
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "nodemon app.js",
-    "dev-client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
-    "start": "node app.js",
-    "build": "npm install && cd client && npm install && npm run build"
+    "dev": "nodemon app.js",
+    "start": "node dist/app.js",
+    "build": "babel . -d dist --ignore dist,node_modules,public"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
