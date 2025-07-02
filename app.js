@@ -11,8 +11,8 @@ const cookieParser = require('cookie-parser');
 
 const app = express();
 
-// app.use("/public", express.static(path.join(__dirname, "public"))); //for local 
-app.use('/public', express.static(path.join(__dirname, '..', 'public')));
+app.use("/public", express.static(path.join(__dirname, "public"))); //for local 
+// app.use('/public', express.static(path.join(__dirname, '..', 'public')));
 
 // CORS setup for Production and Development
 const corsOptions = {

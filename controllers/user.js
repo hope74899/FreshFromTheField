@@ -279,7 +279,7 @@ const getUserById = async (req, res, next) => {
         next(err); // Pass the error to the next middleware for centralized error handling
     }
 };
-const login = async (req, res) => {
+const login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
         // Check if email and password are provided
@@ -324,7 +324,7 @@ const login = async (req, res) => {
         next(err)
     }
 };
-const logout = async (req, res) => {
+const logout = async (req, res, next) => {
     try {
         if (!req.user || !req.user._id) {
             return res.status(400).json({ message: "User not authenticated" });
@@ -456,7 +456,7 @@ const updatePassword = async (req, res, next) => {
         next(error);
     }
 };
-const googleCallback = async (req, res) => {
+const googleCallback = async (req, res, next) => {
     try {
         const user = req.user; // Passport attaches the authenticated user to req.user
 
@@ -482,7 +482,7 @@ const googleCallback = async (req, res) => {
         res.status(500).json({ message: "Internal Server Error" });
     }
 };
-const getToken = (req, res) => {
+const getToken = (req, res, next) => {
     try {
         // console.log("Request Headers:", req.headers);
         // Ensure req.cookies exists
