@@ -264,7 +264,7 @@ const ProductDetail = () => {
                                 </span>
                             </p>
                             <p>
-                                <span className="font-medium">Order Range:</span> {product.minOrderQty || 1} - {product.maxOrderQty || 100} {product.unit}
+                                <span className="font-medium">Order Range:</span> {product.minOrderQty} - {product.maxOrderQty} {product.unit}
                             </p>
 
                             {/* Varieties Picklist */}
